@@ -6,7 +6,7 @@ import Player from "./player";
 import axios from "axios";
 
 const spotifyApi = new spotifyWebApi({
-  clientId: "7aa5e4bfe240467fa7f671e2e1822491",
+  clientId: "fb9a97862c6740ce936275cbbbcc8551",
 });
 
 export default function Dashboard({ code }) {
