@@ -15,7 +15,7 @@ app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://spotify-prueba-front.vercel.app/",
+    redirectUri: "http://localhost:3000/",
     clientId: "fb9a97862c6740ce936275cbbbcc8551",
     clientSecret: "d9d1335a08dd447e86b3743def7a46bc",
     refreshToken,

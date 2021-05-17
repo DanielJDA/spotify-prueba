@@ -11,3 +11,10 @@
   justify-content: center;
   
 }
+.fondo {
+  background-image: url(https://lh3.googleusercontent.com/uSUrkrEr1V9P_6sIuJ81PjvLafu7lsKIGQvv2YziCEmL_Kzz7zJVfsZQx7Ce05N9AkNozlWofVsmNy2Ca3X1=w1920-h937-rw);
+  background-size: cover;
+  -webkit-box-pack: center;
+  justify-content: center;
+  
+}

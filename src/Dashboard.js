@@ -10,7 +10,7 @@ const spotifyApi = new spotifyWebApi({
 });
 
 export default function Dashboard({ code }) {
-  console.log({code})
+  console.log({ code });
   const accessToken = useAuth(code);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -23,6 +23,7 @@ export default function Dashboard({ code }) {
     setLyrics("");
   }
   useEffect(() => {
+    
     if (!playingTrack) return;
     axios
       .get("http://localhost:3001/lyrics", {
@@ -32,6 +33,7 @@ export default function Dashboard({ code }) {
         },
       })
       .then((res) => {
+        
         setLyrics(res.data.lyrics);
       });
   }, [playingTrack]);
@@ -47,6 +49,7 @@ export default function Dashboard({ code }) {
 
     let cancel = false;
     spotifyApi.searchTracks(search).then((res) => {
+      console.log(res)
       if (cancel) return;
       setSearchResult(
         res.body.tracks.items.map((track) => {
@@ -70,8 +73,8 @@ export default function Dashboard({ code }) {
   }, [search, accessToken]);
 
   return (
-    <div className=" flex flex-col justify-center items-center bg-black min-h-screen">
-      <div className="w-2/4 min-h-screen bg-white">
+    <div className=" flex flex-col justify-center items-center min-h-screen fondo">
+      <div className="w-2/4 min-h-screen text-white">
         <div className="w-full h-full relative pb-14">
           <input
             type="search"
@@ -90,7 +93,7 @@ export default function Dashboard({ code }) {
             ))}
           </div>
           {searchResult.length === 0 && (
-            <div className="text-center text-5xl pt-8 px-14">{lyrics}</div>
+            <div className="text-center flex justify-center items-center w-5/12 m-auto space-y-1.5 text-xl pt-8 px-14">{lyrics}</div>
           )}
         </div>
       </div>
