@@ -1,12 +1,12 @@
+// Button.tsx
 import React from "react";
 
-interface Props {
+export interface IButtonProps {
   children?: React.ReactNode;
-  className: string;
 }
 
-const Button: React.FC<Props> = ({ children, className }) => {
-  return <button className={className}>{children}</button>;
+const Button: React.FC<IButtonProps> = ({ children }) => {
+  return <button>{children}</button>;
 };
 
 export default Button;
