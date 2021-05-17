@@ -10,6 +10,7 @@ const spotifyApi = new spotifyWebApi({
 });
 
 export default function Dashboard({ code }) {
+  console.log({code})
   const accessToken = useAuth(code);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
