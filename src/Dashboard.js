@@ -7,8 +7,7 @@ import axios from "axios";
 
 const spotifyApi = new spotifyWebApi({
   clientId: "fb9a97862c6740ce936275cbbbcc8551",
-  country: "SE",
-  locale: "sv_SE",
+  country: "SV",
   timestamp: "2014-10-23T09:00:00",
 });
 

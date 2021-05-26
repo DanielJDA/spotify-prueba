@@ -37,7 +37,7 @@ app.post("/refresh", (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000",
+    redirectUri: "https://spotify-prueba-front.vercel.app",
     clientId: "fb9a97862c6740ce936275cbbbcc8551",
     clientSecret: "d9d1335a08dd447e86b3743def7a46bc",
   });
