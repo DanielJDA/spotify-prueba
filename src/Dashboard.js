@@ -27,7 +27,7 @@ export default function Dashboard({ code }) {
   useEffect(() => {
     if (!playingTrack) return;
     axios
-      .get("http://35.243.230.75:3001/lyrics", {
+      .get("http://35.227.65.41:3001/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
