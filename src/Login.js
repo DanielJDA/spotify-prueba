@@ -1,7 +1,7 @@
 import Button from "./button";
 export default function Login() {
   const AUTH_URL =
-    "https://accounts.spotify.com/authorize?client_id=fb9a97862c6740ce936275cbbbcc8551&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+    "https://accounts.spotify.com/authorize?client_id=fb9a97862c6740ce936275cbbbcc8551&response_type=code&redirect_uri=http://35.243.230.75:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
 
   return (
     <div className="w-full bg-image flex justify-center items-center h-screen">

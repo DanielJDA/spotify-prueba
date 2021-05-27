@@ -27,7 +27,7 @@ export default function Dashboard({ code }) {
   useEffect(() => {
     if (!playingTrack) return;
     axios
-      .get("http://localhost:3001/lyrics", {
+      .get("http://35.243.230.75:3001/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
@@ -43,7 +43,7 @@ export default function Dashboard({ code }) {
     spotifyApi.setAccessToken(accessToken);
   }, [accessToken]);
 
-  /*useEffect(() => {
+  useEffect(() => {
     if (!search) return setSearchResult([]);
     if (!accessToken) return;
 
@@ -70,9 +70,9 @@ export default function Dashboard({ code }) {
       );
     });
     return () => (cancel = true);
-  }, [search, accessToken]);*/
+  }, [search, accessToken]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (!search) return setSearchResult([]);
     if (!accessToken) return;
     let cancel = false;
@@ -91,7 +91,7 @@ export default function Dashboard({ code }) {
                 return smallest;
               },
               track.album.images[0]
-            );*/
+            );
             return {
               title: track.name,
               uri: track.uri,
@@ -100,7 +100,7 @@ export default function Dashboard({ code }) {
         );
       });
     return () => (cancel = true);
-  }, [search, accessToken]);
+  }, [search, accessToken]);*/
 
   return (
     <div className=" flex flex-col justify-center items-center min-h-screen fondo">
